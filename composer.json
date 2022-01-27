@@ -1,0 +1,17 @@
+{
+    "name": "lenny/monsite",
+    "autoload": {
+        "psr-4": {
+            "Router\\": "routes/",
+            "App\\" : "app/",
+            "Database\\": "database/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mika cubi",
+            "email": "mikl42@outlook.fr"
+        }
+    ],
+    "require": {}
+}
