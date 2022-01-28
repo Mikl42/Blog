@@ -11,4 +11,9 @@ class NotFoundException extends Exception
     {
         parent::__construct($message, $code, $previous);
     }
+
+    public function error404()
+    {
+        require VIEWS . 'errors/404.php';
+    }
 }
