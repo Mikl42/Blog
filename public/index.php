@@ -23,5 +23,5 @@ $route->get('/tags/:id', 'App\Controllers\BlogController@tag');
 try{
     $route->run();
 }catch (NotFoundException $e){
-    echo $e->getMessage();
+    echo $e->error404();
 }

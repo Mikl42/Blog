@@ -14,6 +14,7 @@ class NotFoundException extends Exception
 
     public function error404()
     {
+        http_response_code(404);
         require VIEWS . 'errors/404.php';
     }
 }
