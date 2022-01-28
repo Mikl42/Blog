@@ -20,6 +20,11 @@ $route->get('/posts', 'App\Controllers\BlogController@index');
 $route->get('/posts/:id', 'App\Controllers\BlogController@show');
 $route->get('/tags/:id', 'App\Controllers\BlogController@tag');
 
+$route->get('/admin/posts', '\App\Controllers\Admin\PostController@index');
+$route->post('/admin/posts/delete/:id','\App\Controllers\Admin\PostController@destroy');
+$route->get('/admin/posts/edit/:id','\App\Controllers\Admin\PostController@edit');
+$route->post('/admin/posts/edit/:id','\App\Controllers\Admin\PostController@update');
+
 try{
     $route->run();
 }catch (NotFoundException $e){

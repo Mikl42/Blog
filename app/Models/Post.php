@@ -31,7 +31,7 @@ HTML;
            "SELECT t.* FROM tags AS t
            INNER JOIN post_tag AS pt ON pt.tag_id = t.id
            WHERE pt.post_id = ?",
-           $this->id
+           [$this->id]
        );
    }
 }
